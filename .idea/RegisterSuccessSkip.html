@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册成功</title>
+</head>
+<body>
+    <div>
+        注册成功<span id="span" style="color: red;">5</span>秒后跳转......
+    </div>
+</body>
+
+<script type="text/javascript">
+    var span = document.getElementById("span");
+    var time = 5;
+    var timer = setInterval(function () {
+        if (time>=1){
+            span.innerHTML = time--;
+        }else {
+            location.href = "https://www.baidu.com";
+            clearInterval(timer);
+        }
+    },1000);
+</script>
+</html>
